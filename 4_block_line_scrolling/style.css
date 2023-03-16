@@ -20,6 +20,7 @@ body {
     align-items: center;
     width: 100%;
     gap: 40px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
 }
 
 .container .box {
