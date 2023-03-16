@@ -1,6 +1,6 @@
 *
 {
-    margin: 0;
+    margin-top: 200px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -20,6 +20,7 @@ body {
     align-items: center;
     width: 100%;
     gap: 40px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
 }
 
 .container .box {
@@ -28,4 +29,16 @@ body {
     height: 200px;
     background: linear-gradient(45deg, #00f376 10%, transparent 10%, transparent 50%, #00f376 50%, #00f376 60%, transparent 60%);
     background-size: 40px 40px;
+    transform: rotate(calc(var (--i)) * 90deg);
+    filter: hue-rotate(calc(var(--i) * 90deg));
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40px;
+    }
 }
