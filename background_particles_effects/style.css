@@ -38,7 +38,16 @@ body {
     100px 0 #ff2d7599;
     margin: 0 4px;
     border-radius: 50%;
-    animation: animate 15s ease-in-out;
+    animation: animate 15s ease infinite;
+    animation-duration: calc(125s / var(--i))
+}
+
+.particles span:nth-child(even) {
+    background-color: #ff2d75;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    -100px 0 #4fc3dc99,
+    100px 0 #ff2d7599;
 }
 
 @keyframes animate {
